@@ -5,22 +5,24 @@
 - it is done by keeping a copy of sent frame and automatic retransmitting of frame when timer expires
 - we use Seq_num to number frames based on mod 2
 
+
 ---
-input n : total no of frames 
-i = 1
-while (true){
-   send frame[i]
-   start timer
-   wait for ack or timeout
-   if (ACK received before timeout)
-      i = i + 1
-      prtint(ACK  for frame[i] received)
-   else 
+      input n : total no of frames 
+      i = 1
+      while (true){
+         send frame[i]
+         start timer
+         wait for ack or timeout
+         if (ACK received before timeout)
+            i = i + 1
+            prtint(ACK  for frame[i] received)
+         else 
       print(Timeout retransmit frame)
 
-print(All frames ransmitted succesfully)
-}
+      print(All frames ransmitted succesfully)
+      }
 ---
+
 
 ## 2. Go-Back-N
 
@@ -29,20 +31,24 @@ print(All frames ransmitted succesfully)
 - If an error occurs, retransmits from that frame and all after it.
 - high efficiency but more retransmissions 
 
----
-total_frames = n
-window_size = w
-curr_frame =1 
-next_frame = 1
-ack[1..n] = False
 
-while(not all ack received){
-    // send frame within window
-    while(next_frame < curr_frame + window_size && next_frame < n>){
-        SEND frame[next_frame]
-        START timer[next_frame]
-        nrxt_ftame +=1
-    }
+
+
+---
+
+      total_frames = n
+      window_size = w
+      curr_frame =1 
+      next_frame = 1
+      ack[1..n] = False
+
+      while(not all ack received){
+          // send frame within window
+          while(next_frame < curr_frame + window_size && next_frame < n>){
+              SEND frame[next_frame]
+              START timer[next_frame]
+              next_ftame +=1
+       }
 
     // wait for ACK
 
