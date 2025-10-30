@@ -1,21 +1,18 @@
 # Computer_Network-lab
 - assignments from CN lab
 
-topics covered : 
+## topics covered : 
 
-## error detection
-    - LRC
-    - CRC
-    - VRC
-## flow control 
+### 1. error detection
+- LRC
+- CRC
+- VRC
+### 2. flow control 
    - Stop-wait protocol
    - sliding-window-protocol
-
-## Packet Capturing (char stuffing)
-
-## header analysis using Wireshark
-
-## error control 
-    - stop-and-wait-ARQ
-    - GO-Back_N
-    - Selective_Repeat_ARQ
+### 3. Packet Capturing (char stuffing)
+### 4. header analysis using Wireshark
+### 5. error control 
+- stop-and-wait-ARQ
+- GO-Back_N
+- Selective_Repeat_ARQ
